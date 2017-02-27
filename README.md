@@ -19,6 +19,8 @@ Google and Facebook registration and authentication system.
 
 # ==To run the module on your VM==
 
+Download the application
+
 Install Vagrant.
 
 Start Vagrant
