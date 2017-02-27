@@ -1,0 +1,308 @@
+/* General */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+}
+
+body {
+	margin: 0;
+	background-color: #4fb9ce;
+}
+
+a {
+  text-decoration: none;
+	color: #f9ba32;
+  font-size: .75em;
+}
+
+a:hover {
+	color: #f8a132;
+}
+
+h1, h2, h3, h4 {
+  color: #FFFFFF;
+}
+
+h1, h2 {
+  font-family: 'Georgia', serif;
+  margin: 2px;
+}
+
+h1 {
+}
+
+h2 {
+	margin-top: 30px;
+	padding: 20px;
+  font-size: 1.2em;
+	color: #103b49;
+	text-transform: uppercase;
+	border-bottom: 3px solid #f9ba32;
+	text-align: center;
+}
+
+p, dd, dt {
+  color: #fff;
+}
+
+.pane {
+  width: 100%;
+  max-width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+	border: 5px solid #f9ba32;
+}
+
+.container-form{
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.edit-item{
+  width: 100%;
+  margin: 0;
+  border: 5px solid #f9ba32;
+  border-radius: 5px;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.header {
+  width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+  background-color: #f9ba32;
+  color: #103b49;
+  padding: 5px;
+  margin-top: 0;
+	display: flex;
+  flex-wrap: wrap;
+}
+
+.restaurantheader{
+	text-align: center;
+	background-color: #f9ba32;
+  color: #103b49;
+}
+
+.restaurantheader h1{
+	padding: 20px;
+	font-size: 40px;
+}
+
+.header h1 {
+  padding: 20px;
+	font-size: 40px;
+}
+
+.header a{
+	width: 80%;
+}
+
+.creator {
+	width: 20%;
+	padding: 10px;
+	text-align: right;
+}
+
+.creator img {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.link-new-item{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	list-style-type: none;
+}
+
+.link-new-item li{
+	width: 33%;
+	text-align: center;
+	padding: 10px;
+}
+
+.link-new-item a{
+  font-size: 20px;
+  color: #d22e36;
+	padding: 5px;
+	border-bottom: 1px solid #d22e36;
+}
+
+.link-new-item a:hover{
+	color: #103b49;
+}
+
+.newrestaurantlink{
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+}
+
+.newrestaurantlink a{
+	font-size:16px;
+	color: #d22e36;
+	border-bottom: 1px solid #d22e36;
+}
+
+.menucage{
+  border-bottom: 1px solid #103b49;
+  padding-bottom: 20px;
+}
+
+.restaurantlist{
+  width: 100%;
+  max-width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.restaurantlist a{
+  text-decoration: none;
+  color: #103b49;
+  font-size: 20px;
+}
+
+.restaurantlist a:hover {
+	color: #f9ba32;
+}
+
+.nameAndPrice{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name {
+  width:80%;
+  display: inline-block;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.price {
+  text-align: right;
+  width:20%;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.description {
+  font-size: 14px;
+  width: 100%;
+}
+
+.delete-container{
+  text-align: center;
+  margin-top: 30px;
+}
+
+input[type=text], input[type=int] {
+	width: 100%;
+  font-family: monospace;
+  height: 35px;
+}
+
+textarea{
+	width: 100%;
+	font-family: monospace;
+}
+
+input[type=submit] {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.cancel-edit{
+  float: right;
+  text-align: right;
+  font-size: 20px;
+  color: #d22e36;
+  margin: 10px;
+}
+
+.cancel-delete{
+  font-size: 20px;
+  color: #d22e36;
+}
+
+.editdeletepane{
+  padding-top: 10px;
+}
+
+.editdeletepane a{
+  text-decoration: none;
+  color: #103b49;
+  padding: 20px;
+  padding-left: 0;
+}
+
+.editdeletepane a:hover {
+	color: #f9ba32;
+}
+
+.edit-delete-restaurant{
+	position: absolute;
+	z-index:10;
+	top: 10px;
+	left: 10px;
+}
+
+.edit-delete-restaurant a{
+	text-decoration: none;
+  color: #103b49;
+}
+
+.edit-delete-restaurant a:hover {
+	color: #d22e36;
+}
+
+.flash {
+  background: #cee5F5;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+.messaggio{
+	width: 100%;
+	background: #d22e36;
+	text-align: center;
+	color: #fff;
+	list-style-type:none;
+	margin: 0;
+	padding: 20px;
+}
+
+.log-unlog{
+	margin: 20px;
+	font-size: 20px;
+}
+
+.log-unlog a{
+	color: #d22e36;
+	border: 1px solid #d22e36;
+	padding: 10px;
+}
+
+.log-unlog a:hover{
+	color: #103b49;
+}
+
+@media only screen and (max-width:630px) {
+	.link-new-item li{
+		width: 100%;
+	}
+}

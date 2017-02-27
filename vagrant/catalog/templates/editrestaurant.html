@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block content %}
+  <div class = 'header'>
+    <h1>Edit {{restaurant.name}}</h1>
+  </div>
+  <div class="container-form">
+    <form class="edit-item" action= "{{ url_for('editRestaurant',restaurant_id = restaurant.id)}}" method = 'POST'>
+    <p>Old restaurant-name to edit: {{restaurant.name}}</p>
+    <input type = 'text' name = 'name' placeholder = 'new name'>
+    <input type='submit' value='Edit'>
+    </form>
+    <a class="cancel-edit" href= '{{url_for('showRestaurants')}}'>Cancel</a>
+  </div>
+{% endblock %}

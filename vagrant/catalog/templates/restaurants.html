@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<body>
+    <div class = 'restaurantheader'>
+      <h1>Restaurants List</h1>
+    </div>
+    <div class="newrestaurantlink">
+    <a href="{{url_for('newRestaurant')}}">Add Restaurant</a>
+  </div>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li class="messaggio"><strong>{{ message }}</strong></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <div class="restaurantlist">
+      {% for i in restaurants %}
+      	<a href="{{ url_for('showMenu', restaurant_id = i.id)}}">
+      		{{i.name}}
+      	</a>
+      	</br></br>
+  	  {% endfor %}
+    </div>
+  </body>
+{% endblock %}

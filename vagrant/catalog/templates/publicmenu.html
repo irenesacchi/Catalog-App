@@ -1,0 +1,70 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class = 'header'>
+  <a href= '{{url_for('showRestaurants')}}'><h1>{{ restaurant.name }}</h1></a>
+  <div class="creator">
+    <img src="{{ creator.picture}}">
+    <figcaption>{{ creator.name }}</figcaption>
+  </div>
+</div>
+<div class = 'pane'>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li class="messaggio"><strong>{{ message }}</strong></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+				<h2>Appetizers</h2>
+					{% for i in items %}
+						{% if i.course == 'Appetizer' %}
+            <div class="menucage">
+              <div class = 'nameAndPrice'>
+                <p class = 'name'>{{i.name}}</p>
+                <p class = 'price'>{{i.price}}</p>
+                <p class = 'description'>{{i.description}}</p>
+              </div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				<h2>Entrees</h2>
+					{% for i in items %}
+						{% if i.course == 'Entree' %}
+            <div class="menucage">
+              <div class = 'nameAndPrice'>
+              	<p class = 'name'>{{i.name}}</p>
+              	<p class = 'price'>{{i.price}}</p>
+                <p class = 'description'>{{i.description}}</p>
+            	</div>
+						</div>
+						{% endif %}
+					{% endfor %}
+				<h2>Desserts</h2>
+					{% for i in items %}
+						{% if i.course == 'Dessert' %}
+            <div class="menucage">
+              <div class = 'nameAndPrice'>
+              	<p class = 'name'>{{i.name}}</p>
+              	<p class = 'price'>{{i.price}}</p>
+                <p class = 'description'>{{i.description}}</p>
+            	</div>
+						</div>
+						{% endif %}
+					{% endfor %}
+				<h2>Beverages</h2>
+					{% for i in items %}
+						{% if i.course == 'Beverage' %}
+            <div class="menucage">
+              <div class = 'nameAndPrice'>
+              	<p class = 'name'>{{i.name}}</p>
+              	<p class = 'price'>{{i.price}}</p>
+                <p class = 'description'>{{i.description}}</p>
+            	</div>
+						</div>
+						{% endif %}
+					{% endfor %}
+</div>
+{% endblock %}

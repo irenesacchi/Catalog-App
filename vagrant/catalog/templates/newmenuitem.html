@@ -1,0 +1,47 @@
+{% extends "main.html" %}
+{% block content %}
+    <div class = 'header'>
+      <h1>New Menu Item</h1>
+    </div>
+    <div class="container-form">
+    <h1>New Menu Item</h1>
+    <div class = 'newmenu'>
+      <form action="{{ url_for('newMenuItem', restaurant_id=restaurant_id )}}" method = 'POST'>
+    	    <p>Name:</p>
+          <input type ='text' size='30' name='name'>
+          <p>Description:</p>
+					<textarea maxlength="250" rows="3" name="description" placeholder="Description of the course"></textarea>
+					<p>Price:</p>
+						<input type ="int" maxlength="10" name="price" placeholder="Price in $">
+          <label for="course">Course:</label>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="course" id="course1" value="Appetizer">
+              Appetizer
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="course" id="course2" value="Entree">
+              Entree
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="course" id="course3" value="Dessert">
+              Dessert
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="course" id="course4" value="Beverage">
+              Beverage
+            </label>
+          </div>
+        <div>
+          <input type='submit' value='Create'>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

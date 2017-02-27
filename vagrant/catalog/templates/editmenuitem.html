@@ -1,0 +1,47 @@
+{% extends "main.html" %}
+{% block content %}
+<div class = 'header'>
+  <h1>Edit Menu Item</h1>
+</div>
+<div class="container-form">
+	<h1>Edit Menu Item</h1>
+</div>
+  <div class = 'edit-item'>
+			<form action="#" method = "post">
+				<div>
+					<label for="name">Name:</label>
+					<input type ="text" maxlength="100" name="name" value="{{item.name }}">
+					<label for="description">Description:</label>
+					<textarea maxlength="250" rows="3" name="description">{{item.description}}</textarea>
+					<label for="price">Price:</label>
+					<div>
+						<div>$</div>
+						<input type="text" maxlength="10" name="price" value="{{item.price}}">
+					</div>
+					<label for="course">Course:</label>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="course" id="course1" value="Appetizer" {% if item.course == 'Appetizer'%}checked{%endif%}>Appetizer
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="course" id="course2" value="Entree" {% if item.course == 'Entree' %}checked{%endif%}>Entree
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="course" id="course3" value="Dessert" {% if item.course == 'Dessert'%}checked{%endif%}>Dessert
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="course" id="course4" value="Beverage" {%if item.course =='Beverage'%}checked{%endif%}>Beverage
+					  </label>
+					</div>
+					<button type="submit" id="submit" type="submit">Save</button>
+				</div>
+			</form>
+      <a href = '{{url_for('showRestaurants')}}'>Cancel</a>
+		</div>
+{% endblock %}
